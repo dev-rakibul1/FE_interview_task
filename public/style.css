@@ -1,0 +1,18 @@
+body,
+html {
+  background-color: #fff;
+  box-sizing: border-box;
+}
+p {
+  font-size: 16px;
+}
+
+.theme-width {
+  max-width: 100%;
+  width: 1170px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15ppx;
+  padding-right: 15px;
+}
