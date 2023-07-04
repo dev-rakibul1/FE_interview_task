@@ -1,0 +1,30 @@
+.navbar-items-hover {
+  position: relative;
+}
+
+.navbar-items-hover::after {
+  content: "";
+  position: absolute;
+  border: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(77, 77, 77);
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, 50%);
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.navbar-items-hover:hover {
+  color: #000;
+}
+
+.navbar-items-hover:hover::after {
+  opacity: 1;
+  width: 20px;
+}
+
+.active {
+  background-color: rgb(110, 110, 110) !important;
+}
