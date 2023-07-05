@@ -10,7 +10,7 @@ const choseImage3 = "https://i.ibb.co/gZW4Lfd/choose-3.png";
 const Choose = () => {
   return (
     <section className="choose-area">
-      <div className=" theme-width text-white">
+      <div className=" theme-container text-white">
         {/* section title */}
         <SectionTitle
           title="Why choose MYVOIAJ"

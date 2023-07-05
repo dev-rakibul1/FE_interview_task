@@ -13,12 +13,12 @@ const Benefits = () => {
       />
 
       {/* subscribe area */}
-      <div className="theme-width mt-12">
+      <div className="theme-container mt-12">
         <div className="md:max-w-[75%] ml-auto mr-auto">
           <div className="subscribe-area w-full max-w-full flex items-center justify-center">
             <input type="search" placeholder="Enter you email..." />
             <span className="subscribe-btn-icon cursor-pointer">
-              <MdSend className="text-2xl" />
+              <MdSend className="text-2xl text-primary" />
             </span>
           </div>
         </div>

@@ -6,7 +6,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer className="">
-      <div className="theme-width">
+      <div className="theme-container">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {/* footer part 01 */}
           <div className="">
@@ -105,23 +105,25 @@ const Footer = () => {
       </div>
 
       {/* footer copy right */}
-      <div className="footer-copyright theme-width md:flex items-center justify-between py-7">
+      <div className="footer-copyright theme-container text-center md:flex items-center justify-between py-7">
         <div className="copyright-text">
-          <p>&copy; 2023 Myvoiaj an XYZ group company. All rights received.</p>
+          <p className="text-gray-500">
+            &copy; 2023 Myvoiaj an XYZ group company. All rights received.
+          </p>
         </div>
-        <div className="footer-social-icons">
+        <div className="footer-social-icons mt-5 md:mt-0">
           <ul>
             <li className="flex items-center justify-center ml-4">
-              <Link to="/" className="mr-4">
+              <Link to="/" className="mr-4 text-gray-500 hover:text-gray-900">
                 <FaFacebookF />
               </Link>
-              <Link to="/" className="mr-4">
+              <Link to="/" className="mr-4 text-gray-500 hover:text-gray-900">
                 <FaTwitter />
               </Link>
-              <Link to="/" className="mr-4">
+              <Link to="/" className="mr-4 text-gray-500 hover:text-gray-900">
                 <FaInstagram />
               </Link>
-              <Link to="/">
+              <Link to="/" className="text-gray-500 hover:text-gray-900">
                 {" "}
                 <FaYoutube />
               </Link>

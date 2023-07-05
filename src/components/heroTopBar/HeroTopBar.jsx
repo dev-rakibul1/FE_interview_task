@@ -3,8 +3,8 @@ import { MdOutlineCall, MdOutlineEmail } from "react-icons/md";
 
 const HeroTopBar = () => {
   return (
-    <div className="bg-black text-gray-400 py-2">
-      <div className="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2	xl:grid-cols-2 theme-width">
+    <div className="bg-black text-gray-400 py-2 hidden md:block">
+      <div className="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2	xl:grid-cols-2 theme-container">
         {/* hero top bar left */}
         <div className="heroTopBarLeft flex items-center justify-start">
           <a
