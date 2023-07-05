@@ -1,6 +1,6 @@
 import React from "react";
 import { MdFormatListBulleted } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 const logo = "https://i.ibb.co/QHNpWYd/logo-1.png";
 
@@ -8,53 +8,53 @@ const Navbar = () => {
   const navItems = (
     <>
       <li className="navbar-items-hover bg-transparent ">
-        <Link
+        <NavLink
           to="/"
           className="navbar-link focus:bg-transparent hover:bg-transparent"
         >
           Hotels
-        </Link>
+        </NavLink>
       </li>
 
       <li className="navbar-items-hover bg-transparent ">
-        <Link
+        <NavLink
           to="/fights"
           className="navbar-link focus:bg-transparent hover:bg-transparent"
         >
           Flights
-        </Link>
+        </NavLink>
       </li>
       <li className="navbar-items-hover bg-transparent ">
-        <Link
-          to="/"
+        <NavLink
+          to="/fight-hotel"
           className="navbar-link focus:bg-transparent hover:bg-transparent"
         >
           Flights + Hotels
-        </Link>
+        </NavLink>
       </li>
       <li className="navbar-items-hover bg-transparent ">
-        <Link
-          to="/"
+        <NavLink
+          to="/cars"
           className="navbar-link focus:bg-transparent hover:bg-transparent"
         >
           Cars
-        </Link>
+        </NavLink>
       </li>
       <li className="navbar-items-hover bg-transparent ">
-        <Link
-          to="/"
+        <NavLink
+          to="/activities"
           className="navbar-link focus:bg-transparent hover:bg-transparent"
         >
           Activities
-        </Link>
+        </NavLink>
       </li>
       <li className="navbar-items-hover bg-transparent ">
-        <Link
-          to="/"
+        <NavLink
+          to="/tours"
           className="navbar-link focus:bg-transparent hover:bg-transparent"
         >
           Tours
-        </Link>
+        </NavLink>
       </li>
     </>
   );
