@@ -1,0 +1,8 @@
+.footer-link a {
+  transition: 0.3s;
+  display: block;
+}
+
+.footer-link a:hover {
+  color: #000;
+}
