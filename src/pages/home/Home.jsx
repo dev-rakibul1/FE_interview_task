@@ -1,4 +1,5 @@
 import React from "react";
+import Benefits from "../../components/benefits/Benefits";
 import Choose from "../../components/choose/Choose";
 import Destinations from "../../components/choose/destinations/Destinations";
 import HeroArea from "../../components/heroArea/HeroArea";
@@ -20,6 +21,7 @@ const Home = () => {
       <Choose />
       <Destinations />
       <Holidays />
+      <Benefits />
 
       <br />
       <br />

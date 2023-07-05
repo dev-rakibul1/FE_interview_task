@@ -1,0 +1,23 @@
+.subscribe-area {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+}
+
+.subscribe-area input {
+  width: 100%;
+  height: 65px;
+  padding: 15px;
+}
+
+.subscribe-btn-icon {
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
