@@ -17,7 +17,7 @@ const Navbar = () => {
 
       <li className="navbar-items-hover bg-transparent ">
         <Link
-          to="/"
+          to="/fights"
           className="navbar-link focus:bg-transparent hover:bg-transparent"
         >
           Flights
@@ -59,8 +59,8 @@ const Navbar = () => {
   );
 
   return (
-    <div className="bg-gray-100 text-gray-400">
-      <div className="theme-width py-7">
+    <nav className=" text-gray-400">
+      <div className="theme-width">
         <div className="navbar mr-auto">
           <div className="">
             <div className="dropdown">
@@ -80,7 +80,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
