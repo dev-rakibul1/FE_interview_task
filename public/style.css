@@ -1,3 +1,11 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/*
+
+font-family: 'Rajdhani', sans-serif;
+font-family: 'Urbanist', sans-serif;
+*/
+
 body,
 html {
   background-color: #fff;
@@ -15,4 +23,9 @@ p {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
 }
