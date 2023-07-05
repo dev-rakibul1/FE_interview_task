@@ -1,9 +1,13 @@
 /* google fonts */
-@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Signika+Negative:wght@300;400;500;600;700&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 /*
 
 font-family: 'Rajdhani', sans-serif;
 font-family: 'Urbanist', sans-serif;
+
+font-family: 'Signika Negative', sans-serif;
 */
 
 body,
@@ -15,7 +19,7 @@ p {
   font-size: 16px;
 }
 
-.theme-width {
+.theme-container {
   max-width: 100%;
   width: 1170px;
   height: auto;

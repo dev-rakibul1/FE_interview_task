@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div>
       <div
-        className="theme-width w-full h-full bg-cover bg-no-repeat bg-center"
+        className="theme-container w-full h-full bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
         <HeroTimeSlot />
