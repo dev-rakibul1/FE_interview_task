@@ -11,7 +11,6 @@ const tour3 =
 const tour4 =
   "https://i.ibb.co/TLDzqjZ/nick-fewings-a30-DGL2-WST0-unsplash.jpg";
 const tour5 = "https://i.ibb.co/Drf9VCN/ryan-cheng-Envfrlm-Axfg-unsplash.jpg";
-const tour6 = "https://i.ibb.co/Tt359rG/tour-1.jpg";
 
 const Destinations = () => {
   return (

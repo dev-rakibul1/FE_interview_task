@@ -47,3 +47,119 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* -------------------------------------- */
+.popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgb(240, 240, 240);
+  max-width: 100%;
+}
+
+input#ej2-datetimepicker_0 {
+  border: none;
+  border-bottom: none;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.e-input-group:not(.e-float-icon-left),
+.e-input-group.e-control-wrapper:not(.e-float-icon-left) {
+  border-bottom: none !important;
+}
+
+.e-input-group:not(.e-float-icon-left):focus,
+.e-input-group.e-control-wrapper:not(.e-float-icon-left):focus {
+  border-bottom: none !important;
+}
+
+.e-input-group:not(.e-float-icon-left):not(.e-float-input)::before,
+.e-input-group:not(.e-float-icon-left):not(.e-float-input)::after,
+.e-input-group.e-float-icon-left:not(.e-float-input) .e-input-in-wrap::before,
+.e-input-group.e-float-icon-left:not(.e-float-input) .e-input-in-wrap::after,
+.e-input-group.e-control-wrapper:not(.e-float-icon-left):not(
+    .e-float-input
+  )::before,
+.e-input-group.e-control-wrapper:not(.e-float-icon-left):not(
+    .e-float-input
+  )::after,
+.e-input-group.e-control-wrapper.e-float-icon-left:not(.e-float-input)
+  .e-input-in-wrap::before,
+.e-input-group.e-control-wrapper.e-float-icon-left:not(.e-float-input)
+  .e-input-in-wrap::after {
+  background: none !important;
+}
+
+span.e-input-group-icon.e-range-icon.e-icons {
+  position: absolute;
+  left: -30%;
+  top: 5%;
+  font-size: 52px;
+  opacity: 0.5;
+}
+span.e-input-group.e-control-wrapper.e-date-range-wrapper.e-valid-input {
+  line-height: 47px;
+  margin-top: 0px;
+}
+
+span.e-input-group.e-control-wrapper.e-date-range-wrapper.e-valid-input {
+  padding-bottom: 10px;
+}
+
+p.time-date-slot-text {
+  position: absolute;
+  top: 60%;
+  left: 0;
+}
+
+button.room-guest-btn {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.traveling-room-slot select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid red;
+  padding: 10px;
+  padding-top: 26px;
+  position: relative;
+  margin-top: 15px;
+}
+
+.traveling-room-slot label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 2px 13px;
+  font-size: 13px;
+}
+
+.traveling-room-slot {
+  position: relative;
+}
+
+input#date {
+  padding-bottom: 23px;
+}
+
+label.adults-slots-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.date-time-slots input {
+  font-size: 15px;
+  font-weight: 500;
+}
