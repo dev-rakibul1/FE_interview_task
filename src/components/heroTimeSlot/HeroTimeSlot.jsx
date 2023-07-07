@@ -12,6 +12,12 @@ const HeroTimeSlot = () => {
   const getMonth = date.toLocaleDateString("en-US", options);
   const getMonthDate = date.getDate();
   const [validationMessage, setValidationMessage] = useState("");
+  const [selectFields, setSelectFields] = useState([]);
+
+  // ROOM AND GUEST RELATED
+  const [showDatePicker, setShowDatePicker] = useState(false);
+  const [adultsIncrement, setAdultsIncrement] = useState(0);
+  const [childDecrement, setChildDecrement] = useState(0);
 
   const startValue = `${getMonth} ${getMonthDate}`;
   console.log(startValue);
@@ -28,7 +34,6 @@ const HeroTimeSlot = () => {
   );
 
   // handle validation
-
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
@@ -64,11 +69,6 @@ const HeroTimeSlot = () => {
       return;
     }
 
-    // if (rooms && guests) {
-    //   setValidationMessage("Please select at least one adult.");
-    //   return;
-    // }
-
     if (rooms < 1) {
       setValidationMessage("Please count the room.");
       return;
@@ -78,32 +78,17 @@ const HeroTimeSlot = () => {
       setValidationMessage("Please selected your guest.");
       return;
     }
-
-    // All validations passed, proceed with form submission
-    // Your logic for handling the form submission here
   };
 
   console.log(validationMessage);
-
-  // ROOM AND GUEST RELATED
-  const [showDatePicker, setShowDatePicker] = useState(false);
-  // const [selectedDate, setSelectedDate] = useState("");
-  const [adultsIncrement, setAdultsIncrement] = useState(0);
-  const [childDecrement, setChildDecrement] = useState(0);
 
   const handleDateClick = () => {
     setShowDatePicker(true);
   };
 
-  // const handleDateChange = (event) => {
-  //   setSelectedDate(event.target.value);
-  // };
-
   const handleDatePickerClose = () => {
     setShowDatePicker(false);
   };
-
-  //   ----------------------------
 
   // includes their child list
   const childIncrementHandle = () => {
@@ -112,9 +97,6 @@ const HeroTimeSlot = () => {
   const childDecrementHandle = () => {
     setChildDecrement(childDecrement - 1);
   };
-
-  //   ==================================
-  const [selectFields, setSelectFields] = useState([]);
 
   const handleIncrement = () => {
     if (selectFields.length < 10) {

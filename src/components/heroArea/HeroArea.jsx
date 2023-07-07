@@ -7,7 +7,7 @@ const HeroArea = () => {
         <h1 className="text-3xl sm:text-5xl font-semibold">
           Search, Save and My<span className="text-[#0010B5]">voiag</span>
         </h1>
-        <p className="">
+        <p className="mt-4 text-xl">
           Choice from over{" "}
           <span className="text-[#0010B5] font-semibold">450 airlines</span> &{" "}
           <span className="text-[#0010B5] font-semibold">
