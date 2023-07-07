@@ -148,13 +148,14 @@ button.room-guest-btn {
   align-items: center;
   justify-content: center;
   width: 100%;
-  border: 1px solid red;
+  border: 1px solid #ddd;
   padding: 10px;
-  padding-top: 26px;
+  padding-top: 19px;
   position: relative;
-  margin-top: 15px;
+  margin-top: 13px;
+  border-radius: 6px;
+  padding: 23px 15px 3px 17px;
 }
-
 .traveling-room-slot label {
   position: absolute;
   top: 0;

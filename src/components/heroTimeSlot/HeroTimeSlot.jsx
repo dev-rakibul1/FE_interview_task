@@ -113,12 +113,6 @@ const HeroTimeSlot = () => {
     setChildDecrement(childDecrement - 1);
   };
 
-  if (childDecrement > 10) {
-    console.log("Value is big");
-  } else if (childDecrement < 1) {
-    console.log("Value is small");
-  }
-
   //   ==================================
   const [selectFields, setSelectFields] = useState([]);
 
@@ -136,6 +130,79 @@ const HeroTimeSlot = () => {
     }
   };
 
+  // Dynamic rooms
+  const dynamicRooms = (
+    <>
+      <h5 className="font-semibold">Room 1</h5>
+
+      <div className="flex items-center justify-between">
+        <span>Adults</span>
+        <div className="flex items-center justify-between mt-7">
+          <button
+            onClick={() => childDecrementHandle()}
+            disabled={childDecrement < 1 ? true : false}
+            className={`room-guest-btn ${
+              childDecrement < 1 ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+          >
+            <BiMinus />
+          </button>
+          <h5 className="px-4">{childDecrement}</h5>
+          <button
+            disabled={childDecrement > 10 ? true : false}
+            className={`room-guest-btn ${
+              childDecrement > 10 ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            onClick={() => childIncrementHandle()}
+          >
+            <BiPlus />
+          </button>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-between">
+        <span>Children</span>
+        <div className="flex items-center justify-between mt-4">
+          <button
+            onClick={handleDecrement}
+            disabled={adultsIncrement < 1 ? true : false}
+            className={`room-guest-btn ${
+              adultsIncrement < 1 ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+          >
+            <BiMinus />
+          </button>
+          <h5 className="px-4">{adultsIncrement}</h5>
+          <button
+            disabled={adultsIncrement >= 10 ? true : false}
+            className={`room-guest-btn ${
+              adultsIncrement >= 10 ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            onClick={handleIncrement}
+          >
+            <BiPlus />
+          </button>
+        </div>
+      </div>
+
+      {/* ========================== */}
+      <div>
+        {selectFields.map((field, index) => (
+          <div key={index} className="traveling-room-slot">
+            <label>{`Child ${index + 1} age *`}</label>
+            <select value={field} onChange={() => {}}>
+              {Array.from({ length: 10 }, (_, i) => (
+                <option key={i + 1} value={i + 1}>
+                  {i + 1}
+                </option>
+              ))}
+            </select>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+
   return (
     <section className=" theme-container">
       {validationMessage ? (
@@ -146,12 +213,12 @@ const HeroTimeSlot = () => {
         </>
       ) : undefined}
       <form onSubmit={handleFormSubmit}>
-        <div className="grid grid-cols-10 gap-4">
+        <div className="md:grid grid-cols-10 gap-4  mt-4">
           <div className="col-span-9">
             <div className="relative">
-              <div className="flex items-center justify-between gap-7">
+              <div className="md:flex items-center justify-between gap-7">
                 {/* location */}
-                <div className="w-full location flex items-center justify-start text-gray-400 p-4 rounded-lg">
+                <div className="w-full location flex items-center justify-start text-gray-400 rounded-lg">
                   <span>
                     <MdOutlineLocationOn className="text-4xl" />
                   </span>
@@ -207,86 +274,11 @@ const HeroTimeSlot = () => {
 
                     {showDatePicker && (
                       <div className="popup p-4">
-                        {/* <input type="date" onChange={handleDateChange} /> */}
-                        <h5 className="font-semibold">Room 1</h5>
-
-                        <div className="flex items-center justify-between">
-                          <span>Adults</span>
-                          <div className="flex items-center justify-between mt-7">
-                            <button
-                              onClick={() => childDecrementHandle()}
-                              disabled={childDecrement < 1 ? true : false}
-                              className={`room-guest-btn ${
-                                childDecrement < 1
-                                  ? "opacity-50 cursor-not-allowed"
-                                  : ""
-                              }`}
-                            >
-                              <BiMinus />
-                            </button>
-                            <h5 className="px-4">{childDecrement}</h5>
-                            <button
-                              disabled={childDecrement > 10 ? true : false}
-                              className={`room-guest-btn ${
-                                childDecrement > 10
-                                  ? "opacity-50 cursor-not-allowed"
-                                  : ""
-                              }`}
-                              onClick={() => childIncrementHandle()}
-                            >
-                              <BiPlus />
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="flex items-center justify-between">
-                          <span>Children</span>
-                          <div className="flex items-center justify-between mt-4">
-                            <button
-                              onClick={handleDecrement}
-                              disabled={adultsIncrement < 1 ? true : false}
-                              className={`room-guest-btn ${
-                                adultsIncrement < 1
-                                  ? "opacity-50 cursor-not-allowed"
-                                  : ""
-                              }`}
-                            >
-                              <BiMinus />
-                            </button>
-                            <h5 className="px-4">{adultsIncrement}</h5>
-                            <button
-                              disabled={adultsIncrement >= 10 ? true : false}
-                              className={`room-guest-btn ${
-                                adultsIncrement >= 10
-                                  ? "opacity-50 cursor-not-allowed"
-                                  : ""
-                              }`}
-                              onClick={handleIncrement}
-                            >
-                              <BiPlus />
-                            </button>
-                          </div>
-                        </div>
-
-                        {/* ========================== */}
-                        <div>
-                          {selectFields.map((field, index) => (
-                            <div key={index} className="traveling-room-slot">
-                              <label>{`Child ${index + 1} age *`}</label>
-                              <select value={field} onChange={() => {}}>
-                                {Array.from({ length: 10 }, (_, i) => (
-                                  <option key={i + 1} value={i + 1}>
-                                    {i + 1}
-                                  </option>
-                                ))}
-                              </select>
-                            </div>
-                          ))}
-                        </div>
+                        {dynamicRooms}
 
                         <div className="text-end">
                           <button
-                            className="mt-7 text-end bg-[#4A07DA] py-2 px-5 rounded-lg text-white"
+                            className="w-full mt-7 text-center bg-[#4A07DA] py-2 px-5 rounded-lg text-white"
                             onClick={handleDatePickerClose}
                           >
                             Done
@@ -299,10 +291,10 @@ const HeroTimeSlot = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-1 flex items-center justify-center">
+          <div className="mt-7 md:mt-0 w-full md:w-auto col-span-1 flex items-center justify-center">
             <button
               type="submit"
-              className="bg-primary p-4 rounded-xl text-4xl text-white"
+              className="w-full md:w-auto bg-primary flex items-center justify-center p-3 rounded-xl text-3xl text-white"
             >
               <FiSearch />
             </button>
