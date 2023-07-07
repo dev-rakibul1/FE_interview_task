@@ -94,11 +94,30 @@ input#ej2-datetimepicker_0 {
 
 span.e-input-group-icon.e-range-icon.e-icons {
   position: absolute;
-  left: -30%;
-  top: 5%;
-  font-size: 52px;
-  opacity: 0.5;
+  left: -28%;
+  width: 100%;
+  bottom: 0;
+  right: 50%;
+  padding: 18px;
+  opacity: 0;
 }
+
+span.e-input-group-icon.e-range-icon.e-icons.e-active {
+  position: absolute;
+  left: -28%;
+  width: 100%;
+  bottom: 0;
+  right: 50%;
+  padding: 18px;
+  opacity: 0;
+}
+
+/* To specify background color and border */
+.e-calendar {
+  background-color: peachpuff;
+  border: 3px solid rgb(51, 253, 0);
+}
+
 span.e-input-group.e-control-wrapper.e-date-range-wrapper.e-valid-input {
   line-height: 47px;
   margin-top: 0px;
@@ -160,6 +179,6 @@ label.adults-slots-label {
 }
 
 .date-time-slots input {
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 20px !important;
+  font-weight: 500 !important;
 }
